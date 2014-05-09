@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -26,14 +26,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring' 
 gem 'bcrypt-ruby'   
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem 'google-api-client', :require => 'google/api_client'
+gem 'omniauth', '1.1.0'
+gem 'omniauth-google-oauth2', :git => 'https://github.com/zquestz/omniauth-google-oauth2.git'
+
  group :development, :test do
    gem 'dotenv-rails'
    gem 'pry'
    gem 'rspec-rails'
-   gem 'twitter-bootstrap-rails', '~> 2.2.8'
-   gem 'google-api-client', :require => 'google/api_client'
-   gem 'omniauth', '1.1.0'
-   gem 'omniauth-google-oauth2', :git => 'https://github.com/zquestz/omniauth-google-oauth2.git'
  end
 
 
