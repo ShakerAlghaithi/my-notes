@@ -1,11 +1,12 @@
-<h2>Edit Your Note</h2>
-<%= form_for @note do |f| %>
+<h1 style="font-variant:small-caps;">Edit Your Note</h1>
+  <%= form_for @note do |f| %>
 
-  <%= label_tag(:title, "Title:") %>
-  <%= f.text_field :title %></br>
+     <%= label_tag(:title, "Title:") %>
+     <%= f.text_field :title %></br>
 
-  <%= label_tag(:Text, "Note") %>
-  <%= f.text_area :note %></br>
+     <%= label_tag(:Text, "Note") %>
+     <%= f.text_area :note %></br>
 
-  <%= f.submit "Submit" %>
-<% end %>
+     <%= f.submit "Submit" %>
+  <% end %>
+<%= link_to "Back to the notes", notes_path %>

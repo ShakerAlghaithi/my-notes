@@ -1,25 +1,16 @@
-
- 
-   <nav class="navbar navbar-inverse navbar-fixed-top">
- 
-     <div class="container-fluid">
-       <a class="navbar-brand" href="#">MY NOTES</a>
+ <div style="position:fixed; right:70px;top:80px; color:red;">
+    <%= link_to "Connect to Google calendar", "/auth/google_oauth2" %>
+</div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+       <a  style="text-shadow:4px 4px 8px red ;" class="navbar-brand" href="#">MY NOTES</a>
        
-       <%= link_to "Sign-out", signout_path, :method => :delete, :class => "btn btn-default btn-sm navbar-right"%>
-       
-       <%= link_to "Connect to Google calendar", "/auth/google_oauth2" %>
-      
-
-           
+       <%= link_to "Sign-out", signout_path, :method => :delete, :class => "btn btn-danger btn-sm navbar-right"%>
+               
    </div>
   </div>
  </nav>
- 
-
-
-
- 
-<table id="table", class="table">
+ <table id="table", class="table">
     <tr> 
       <th>NOte Title</th>
      </tr>
@@ -30,6 +21,6 @@
        </tr>  
      <% end %>
  </table>
-   <%= link_to "New_note", new_note_path, :class => "btn btn-success"%>
+   <%= link_to "New_note", new_note_path, :class => "btn btn-success btn-sm"%>
 
 

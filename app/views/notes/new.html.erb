@@ -1,4 +1,4 @@
-<h2>Add your new note:</h2>
+<h1 style= "font-variant:small-caps;">Add Your New Note:</h1>
 
 <%= form_for @note do |f| %>
     <p>
@@ -15,3 +15,4 @@
       <%= f.submit %>
     </p>
  <% end %>
+ <%= link_to "Back To The Home Page", notes_path %>
