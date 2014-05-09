@@ -24,6 +24,7 @@
  margin: 100px;
  background-image:url("http://www.blogcdn.com/www.engadget.com/media/2007/02/g-note-7100-2.jpg");
  background-repeat: no-repeat;
+ background-size: cover;
  }
  #tableshow {
    margin-top: 100px;
