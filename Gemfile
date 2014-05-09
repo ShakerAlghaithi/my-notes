@@ -36,9 +36,6 @@ gem 'bcrypt-ruby'
    gem 'omniauth-google-oauth2', :git => 'https://github.com/zquestz/omniauth-google-oauth2.git'
  end
 
-group :development, :test do
-  gem 'dotenv-rails'
-end
 
 group :production do
   gem 'rails_12factor'
