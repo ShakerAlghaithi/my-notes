@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyNotes</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="img"> 
+       background-image:url("http://www.blogcdn.com/www.engadget.com/media/2007/02/g-note-7100-2.jpg");
+
+    </div>
+<%= yield %>
+
+</body>
+</html>

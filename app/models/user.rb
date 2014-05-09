@@ -1,0 +1,35 @@
+class User < ActiveRecord::Base
+
+  has_secure_password
+
+  before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
+
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence:   true,
+                    format:     { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+  validates :password, presence: true, length: { minimum: 6 } , :on => [ :create ]
+  validates :password_confirmation, presence: true, :on =>[ :create ]
+
+  has_many :notes
+  # def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+     # data = access_token.info
+    #  user = User.where(:email => data["email"]).first
+
+         # Uncomment the section below if you want users to be created if they don't exist
+         # unless user
+         #     user = User.create(name: data["name"],
+         #        email: data["email"],
+         #        password: Devise.friendly_token[0,20]
+         #     )
+         # end
+     # user
+  # end
+
+  private
+    def create_remember_token
+      self.remember_token ||= SecureRandom.urlsafe_base64
+    end
+end

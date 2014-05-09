@@ -1,0 +1,19 @@
+<h2>Review Page</h2>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+ <table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  
+    <tr>
+      <td><%= @note.title %></td>
+      <td><%= @note.note %></td>
+    </tr>
+  
+</table>
+</div>
+<%=link_to "Edit", edit_note_path %></br>
+<%= link_to "Back To The Home Page", notes_path %>

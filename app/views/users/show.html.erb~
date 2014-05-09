@@ -1,0 +1,6 @@
+<div class="row">
+  <aside class="col-md-4">
+      <h3><%= @user.name %></h3>
+      <h3><%= @user.email %></h3>
+  </aside>
+</div>

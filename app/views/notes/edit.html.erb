@@ -1,0 +1,11 @@
+<h2>Edit Your Note</h2>
+<%= form_for @note do |f| %>
+
+  <%= label_tag(:title, "Title:") %>
+  <%= f.text_field :title %></br>
+
+  <%= label_tag(:Text, "Note") %>
+  <%= f.text_area :note %></br>
+
+  <%= f.submit "Submit" %>
+<% end %>

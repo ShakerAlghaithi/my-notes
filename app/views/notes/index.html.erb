@@ -1,0 +1,35 @@
+
+ 
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+ 
+     <div class="container-fluid">
+       <a class="navbar-brand" href="#">MY NOTES</a>
+       
+       <%= link_to "Sign-out", signout_path, :method => :delete, :class => "btn btn-default btn-sm navbar-right"%>
+       
+       <%= link_to "Connect to Google calendar", "/auth/google_oauth2" %>
+      
+
+           
+   </div>
+  </div>
+ </nav>
+ 
+
+
+
+ 
+<table id="table", class="table">
+    <tr> 
+      <th>NOte Title</th>
+     </tr>
+       <% @notes.each do |note| %>
+       <tr>
+          <td><%=link_to note.title, note_path(note)%></td>
+          <td><%=link_to"Delete", note, method: :delete, data: {confirm: "Are you sure?"}%></td>
+       </tr>  
+     <% end %>
+ </table>
+   <%= link_to "New_note", new_note_path, :class => "btn btn-success"%>
+
+

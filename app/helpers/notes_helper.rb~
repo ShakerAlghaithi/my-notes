@@ -1,0 +1,17 @@
+module NotesHelper
+
+	def check_note_owner
+	puts "CHECK" #{params[:id]}";
+	
+	#binding.pry
+	
+    note = current_user.notes.where(:id => params[:id]).first
+    
+	puts "CHECK NOTE " #{note}";    
+    if note.nil?
+      flash[:error] = "You must log in."
+      redirect_to note_path(params[:id])
+    end
+  end
+
+end
