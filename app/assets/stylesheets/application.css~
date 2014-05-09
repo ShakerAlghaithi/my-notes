@@ -9,6 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+<<<<<<< HEAD
  *= require bootstrap.min
  *= require_tree .
  *= require_self
@@ -19,14 +20,15 @@
    margin-top: 100px;
    text-align: center;
 }
- #img {
+ body {
  background-image: inherit;
  margin: 100px;
-
+ background-image:url("http://www.blogcdn.com/www.engadget.com/media/2007/02/g-note-7100-2.jpg");
  background-repeat: no-repeat;
+ background-size: cover;
  }
  #tableshow {
-   margin-top: 150px;
+   margin-top: 100px;
    text-align: left;
  }
 
@@ -38,3 +40,9 @@
 	height: 60px;
 	width: 230px;
 }
+=======
+ *
+ *= require_tree .
+ *= require_self
+ */
+>>>>>>> f84f34ad661c804da29441830d9c90cad6bffe54
